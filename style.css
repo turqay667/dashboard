@@ -1,0 +1,355 @@
+*{
+	margin:o;
+	padding:0;
+	box-sizing:border-box;
+	font-family: "Ubuntu", sans-serif;
+}
+body{
+	min-height:10vh;
+	overflow-x:hidden;
+}
+.container{
+	position:relative;
+	width:100%;
+
+}
+.navigation{
+	position:fixed;
+	width:300px;
+   height:100%;
+   background-color:blue;
+   transition:0.5s;
+   overflow:hidden;
+   border-left:10px solid blue;
+}
+.navigation.active{
+	width:80px;
+}
+.navigation ul li{
+	position:relative;
+	width:100%;
+	list-style:none;
+	border-top-left-radius:30px;
+	border-bottom-left-radius:30px;
+}
+.navigation ul li:hover {
+background-color:red;
+width:100%;
+}
+.navigation ul li a{
+	position:relative;
+	width:100%;
+	display:block;
+	display:flex;
+text-decoration:none;
+color:white;
+}
+.navigation ul li a .icon{
+	position:relative;
+	display:block;
+	min-width:60px;
+	height:60px;
+	line-height:70px;
+	text-align:center;
+}
+.navigation ul li:hover a::before
+{
+	content:"";
+	position:absolute;
+	right:0;
+	top:-50px;
+	width:50px;
+	height:50px;
+	background:transparent;
+	border-radius:50%;
+	 box-shadow:35px 35 px 0 10px var(white) ;
+	 pointer-events:none;
+
+}
+
+.icon{
+	position:relative;
+	display:block;
+	min-width:60px;
+	height:60px;
+	line-height:70px;
+	text-align:center;
+}
+.icon ion-icon{
+	font-size:1.75em;
+}
+.navigation ul li a .title{
+	position:relative;
+	display:block;
+	padding:0 10px;
+	line-height:60px;
+	text-align:start;
+	height:60px;
+	white-space:nowrap;
+}
+.main{
+	position:absolute;
+	left:300px;
+	width:calc(100% - 300px);
+	min-height:100vh;
+	background:white;
+	transition:0.5s;
+}
+.main.active{
+	width:calc(100% - 300px);
+	left:80px;
+}
+.topbar{
+	width:100%;
+	height:60px;
+	display:flex;
+	padding:0 10px;
+	justify-content:space-between;
+	align-items:center;
+}
+.toggle{
+	position:relative;
+	width:60px;
+	height:60px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	font-size:2.5em;
+	cursor:pointer;
+	}
+	.sidebar{
+		position:relative;
+		width:300px;
+		margin:0 10px;
+
+	}	
+	.sidebar label{
+		position:relative;
+		width:100%;
+	}
+ .sidebar label input{
+	width:100%;
+	height:40px; 
+	border-radius:40px;
+	padding-left:35px;
+	padding:5px 20px;
+	outline:none;
+    border:1px solid black;
+
+}
+.sidebar label ion-icon{
+	position:absolute;
+	top:0;
+	left:5px;
+	font-size:1.2em;
+}
+.admin{
+	position:relative;
+	width:40px;
+	height:40px;
+	border-radius:50px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.admin img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.Cards{
+	position:relative;
+	width:100%;
+	padding:20px;
+	display:grid;
+	grid-template-columns:repeat(4,1fr);
+	grid-gap:30px;
+}
+.card{
+	position:relative;
+	background-color:white;
+	padding:30px;
+	border-radius:20px;
+	display:flex;
+	cursor:pointer;
+	justify-content:space-between;
+	box-shadow:0 7px 25px rgba(0,0,0,0.08);
+
+}
+.numbers{
+	position:relative;
+	font-weight:500;
+	font-size:2.5em;
+	color:blue;
+}
+.boxname{
+	color:black;
+	font-size:1.1em;
+	margin-top:5px;
+}
+.icons ion-icon{
+	font-size:3.5em;
+	color: black;
+	position:relative;
+}
+
+.card:hover
+{
+	background-color:blue;
+}
+.Cards .card:hover .numbers,
+.Cards .card:hover .boxname,
+.Cards .card:hover .icons
+{
+color:white;
+}
+.card-stat img{
+	width:50%;
+	position:relative;
+}
+.card-chart img{
+	width:70%;
+	padding-left:200px;
+}
+.calendar{
+	padding-left:600px;
+	position:relative;
+	top: 20px;
+	padding-left:25%;
+	width: 90%;
+}
+.month{
+	width:60%;
+	padding:70px 200x;
+	text-align:center;
+	background:green;
+
+}
+.month ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.month ul li{
+	color:white;
+	font-size:30px;
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+.weekdays{
+	width:60%;
+	margin:0;
+	background-color:#ddd;;
+	padding:10px 0;
+}
+.weekdays li {
+	display: inline-block;
+	width: 12%;
+	color: #666;
+	text-align: center;
+  }
+  .days {
+	padding: 10px 0;
+	width:60%;
+	background: #eee;
+	margin: 0;
+  }
+  .days li {
+	list-style-type: none;
+	display: inline-block;
+	width: 12%;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size:18px;
+	color: #777;
+  }
+  .event{
+	  box-shadow:0 4px 16px -8px rgba(0,0,0,0.4);
+	  display:flex;
+	  border-radius:8px;
+	  margin:32px 0;
+     padding-left:400px;
+  }
+.eventl{
+	display:flex;
+	min-width:82px;
+	align-items:center;
+	justify-content:center;
+	color:#eee;
+    background:#222;
+	padding:8px 48px;
+	font-weight:bold;
+	text-align:center;
+	border-radius:8px 0 0  8px;
+}
+.date{
+	font-size:40px;
+}
+.event-month{
+	font-size:20px;
+	font-weight:normal;
+}
+.eventr{
+	display:flex;
+	justify-content:center;
+	padding:0 24px;
+	flex-direction:column;
+}
+.event-title{
+	font-size:24px;
+	margin:24px 0 10px 0;
+	color:blue;
+}
+.timing{
+background:#fff8ba;
+display:flex;
+text-align:center;
+width:100px;
+padding:8px;
+border-radius:16px;
+align-items:center;
+justify-content:center;
+font-size:14px;
+margin:24px 0;
+}
+.event-desc{
+	font-size:20px;
+}
+.timing img{
+	height:20px;
+	padding-right:8px;
+}
+table, th, td {
+	border:1px solid black;
+	padding: 5px;
+	 padding-top: 10px;
+	   border-collapse: collapse;
+  }
+  th{
+	background-color: #f0f0f0;
+  }
+  td{
+	background-color: #f9f9f9;
+  }
+  
+@media(max-width:550px){
+	.event{
+		flex-direction:column;
+	}
+	.eventl{
+		padding:0;
+		border-radius:8px 8px 0 0;
+	}
+	.event-date.date,
+	.event-month{
+		display:inline-block;
+		font-size:24px;
+
+
+	}
+	.event-date{
+		padding:10px 0;
+	}
+}
